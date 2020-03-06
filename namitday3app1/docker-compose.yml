@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+ nkwebapp:
+  image: nginx
+  container_name: nk11
+  volumes:
+   - "./project-html-website:/usr/share/nginx/html/"  
+  ports:
+   - "1111:80"
+        

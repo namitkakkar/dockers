@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: namitdeployment1
+  name: namitdeployment1
+  namespace: namit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: namitdeployment1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: namitdeployment1
+    spec:
+      containers:
+      - image: namitkakkar/namitwebapp:tagname
+        name: namitwebapp
+        resources: {}
+status: {}
