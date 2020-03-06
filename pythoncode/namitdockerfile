@@ -1,0 +1,13 @@
+FROM fedora
+
+# this will pull from  docker hub if no present locally 
+MAINTAINER namit@oracle.com, 87348826432
+# docker image author 
+RUN yum install httpd -y 
+# it will create cotainer and install httod and then merge into fedora 
+WORKDIR /var/www/html/
+# change dir  oin container 
+COPY .   .
+# this copy all files form curent location to target 
+ ENTRYPOINT  httpd  -DFOREGROUND
+
